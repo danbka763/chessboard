@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js"></script>
+  <title>КОНИ🐎🐎🐎</title>
+  <style>
+    table {
+      margin-right: 25px;
+      border-spacing: 0;
+      padding: 50px;
+      background-color: #5c3600;
+    }
+    td {
+      width: 70px; height: 70px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 38px;
+    }
+    p {
+      font-size: 48px;
+      padding: 20px;
+      font-weight: 500;
+      position: absolute;
+      left: 900px; top: 250px;
+      border: 1px solid black;
+      background-color: rgba(255, 235, 205, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <table id="chessboard"></table>
+
+  <script src="main.js"></script>
+
+  <p id="result"></p>
+
+  <script>
+
+    // Ждем прогрузки DOM и после - запускаем основную функцию 
+    var loadDOM = setInterval(() => {
+      if ( document.getElementById('chessboard') ) {
+        clearInterval(loadDOM)
+        main()
+      }
+    }, 1);
+
+  </script>
+</body>
+</html>
